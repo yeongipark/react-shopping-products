@@ -8887,7 +8887,7 @@ const PutItemCount = css`
 `;
 function CartButton({ cartItemAmount }) {
   return /* @__PURE__ */ jsxs("button", { css: CartStyle, children: [
-    /* @__PURE__ */ jsx$1("img", { src: "/Cart.svg", alt: "장바구니 아이콘" }),
+    /* @__PURE__ */ jsx$1("img", { src: "Cart.svg", alt: "장바구니 아이콘" }),
     /* @__PURE__ */ jsx$1("div", { css: PutItemCount, children: cartItemAmount })
   ] });
 }
@@ -9065,12 +9065,12 @@ function CartToggleButton({
 }) {
   const buttonProps = isAdded ? {
     label: "빼기",
-    icon: "/removeCart.svg",
+    icon: "removeCart.svg",
     onClick: () => removeItemToCart({ cartId, productId, setCartItemIds, setErrorTrue }),
     styles: [ButtonContainer, RemoveButton]
   } : {
     label: "담기",
-    icon: "/addCart.svg",
+    icon: "addCart.svg",
     onClick: () => addItemToCart({
       productId,
       cartAmount,
