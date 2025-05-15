@@ -8990,14 +8990,13 @@ const RemoveButton = css`
   background-color: rgba(234, 234, 234, 1);
   color: black;
 `;
-var define_import_meta_env_default$2 = { BASE_URL: "/react-shopping-products/", MODE: "production", DEV: false, PROD: true, SSR: false };
 async function request({
   headers,
   method,
   url,
   body
 }) {
-  const response = await fetch(`${define_import_meta_env_default$2.VITE_BASE_URL}${url}`, {
+  const response = await fetch(`${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}${url}`, {
     method,
     body: body ? JSON.stringify(body) : void 0,
     headers
@@ -9010,7 +9009,6 @@ async function request({
   }
   return null;
 }
-var define_import_meta_env_default$1 = { BASE_URL: "/react-shopping-products/", MODE: "production", DEV: false, PROD: true, SSR: false };
 async function addItemToCart({
   cartAmount,
   setErrorTrue,
@@ -9024,7 +9022,7 @@ async function addItemToCart({
     }
     await request({
       headers: {
-        Authorization: define_import_meta_env_default$1.VITE_TOKEN,
+        Authorization: "Basic eWVvbmdpcGFyazpwYXNzd29yZA==",
         "Content-Type": "application/json"
       },
       method: "POST",
@@ -9045,7 +9043,7 @@ async function removeItemToCart({
   try {
     await request({
       headers: {
-        Authorization: define_import_meta_env_default$1.VITE_TOKEN,
+        Authorization: "Basic eWVvbmdpcGFyazpwYXNzd29yZA==",
         "Content-Type": "application/json"
       },
       method: "DELETE",
@@ -9348,7 +9346,6 @@ function useError() {
     errorMessage
   };
 }
-var define_import_meta_env_default = { BASE_URL: "/react-shopping-products/", MODE: "production", DEV: false, PROD: true, SSR: false };
 function useFetchCartProducts({ setErrorTrue }) {
   const [cartItemIds, setCartItemIds] = reactExports.useState([]);
   const fetchCartProducts = reactExports.useCallback(
@@ -9358,7 +9355,7 @@ function useFetchCartProducts({ setErrorTrue }) {
           method: "GET",
           url: "/cart-items",
           headers: {
-            Authorization: define_import_meta_env_default.VITE_TOKEN,
+            Authorization: "Basic eWVvbmdpcGFyazpwYXNzd29yZA==",
             "Content-Type": "application/json"
           }
         });
