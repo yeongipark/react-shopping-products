@@ -9093,7 +9093,7 @@ async function enableMocking() {
   }, true ? [] : void 0);
   return worker.start({
     serviceWorker: {
-      url: "/yeongipark.github.io/react-shopping-products/mockServiceWorker.js"
+      url: "/react-shopping-products/mockServiceWorker.js"
     }
   });
 }
