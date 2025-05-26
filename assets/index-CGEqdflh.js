@@ -9091,7 +9091,11 @@ async function enableMocking() {
     const { worker: worker2 } = await import("./browser-DpesJlRR.js");
     return { worker: worker2 };
   }, true ? [] : void 0);
-  return worker.start();
+  return worker.start({
+    serviceWorker: {
+      url: "/yeongipark.github.io/mockServiceWorker.js"
+    }
+  });
 }
 enableMocking().then(() => {
   client.createRoot(document.getElementById("root")).render(
