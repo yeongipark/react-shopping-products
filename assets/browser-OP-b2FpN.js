@@ -18781,11 +18781,11 @@ class HttpResponse extends (_d = FetchResponse$1, _c2 = bodyType, _d) {
 }
 checkGlobals();
 const cartHandler = [
-  http.get(`${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}/cart-items`, () => {
+  http.get(`${"https://example.com"}/cart-items`, () => {
     return HttpResponse.json(carts);
   }),
   http.post(
-    `${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}/cart-items`,
+    `${"https://example.com"}/cart-items`,
     async ({ request }) => {
       const body = await request.json();
       const { productId, quantity } = body;
@@ -18803,7 +18803,7 @@ const cartHandler = [
     }
   ),
   http.patch(
-    `${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}/cart-items/:id`,
+    `${"https://example.com"}/cart-items/:id`,
     async ({ request, params }) => {
       const body = await request.json();
       const { quantity } = body;
@@ -18839,7 +18839,7 @@ const cartHandler = [
     }
   ),
   http.delete(
-    `${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}/cart-items/:id`,
+    `${"https://example.com"}/cart-items/:id`,
     async ({ params }) => {
       const { id: cartId } = params;
       carts.content = carts.content.filter(
@@ -18853,7 +18853,7 @@ const cartHandler = [
   )
 ];
 const productHandler = [
-  http.get(`${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}/products`, () => {
+  http.get(`${"https://example.com"}/products`, () => {
     return HttpResponse.json(products);
   })
 ];

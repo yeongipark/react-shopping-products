@@ -8459,7 +8459,7 @@ async function request({
   url,
   body
 }) {
-  const response = await fetch(`${"http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com"}${url}`, {
+  const response = await fetch(`${"https://example.com"}${url}`, {
     method,
     body: body ? JSON.stringify(body) : void 0,
     headers: {
@@ -9201,7 +9201,7 @@ function App() {
 }
 async function enableMocking() {
   const { worker } = await __vitePreload(async () => {
-    const { worker: worker2 } = await import("./browser-CTE9NBFE.js");
+    const { worker: worker2 } = await import("./browser-OP-b2FpN.js");
     return { worker: worker2 };
   }, true ? [] : void 0);
   return worker.start({
